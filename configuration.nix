@@ -15,8 +15,26 @@
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
+  boot.loader.systemd-boot.configurationLimit = 10;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # Mounting disks
+  fileSystems."/home/junkiejamba/Audiobooks" = {
+    device = "/dev/disk/by-uuid/dc5a51af-dc56-45b7-9676-13c87f243228";
+    fsType = "btrfs";
+    options = [
+      "defaults"
+      "nofail"
+    ];
+  };
+  fileSystems."/home/junkiejamba/Videos" = {
+    device = "/dev/disk/by-uuid/c013878a-3e8e-4f54-a347-299f500df4ab";
+    fsType = "btrfs";
+    options = [
+      "defaults"
+      "nofail"
+    ];
+  };
   # Enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -59,6 +77,10 @@
 
   # Enable Flatpaks
   services.flatpak.enable = true;
+  xdg.portal = {
+    enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-cosmic ];
+  };
   # Enable tailscale
   services.tailscale.enable = true;
 

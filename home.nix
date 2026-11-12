@@ -7,6 +7,7 @@
 
   home.packages = with pkgs; [
     zapzap
+    vimix-cursors
     zed-editor
     mcomix
     libation

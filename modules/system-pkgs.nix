@@ -28,15 +28,21 @@
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
    environment.systemPackages = with pkgs; [
+     jellyfin-desktop
+     nwg-look
      noctalia
-     tsukimi
+     ansible
+     ansible-navigator
+     ansible-lint
+     terraform
+#     tsukimi
      jellyfin-desktop
      unrar
      mediawriter
      vim
      kdePackages.okular
      libreoffice
-     onlyoffice-desktopeditors
+     #onlyoffice-desktopeditors
      qbittorrent
      vlc
      proton-vpn
