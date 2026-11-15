@@ -7,6 +7,8 @@
 
   home.packages = with pkgs; [
     zapzap
+    nordzy-icon-theme
+    nordzy-cursor-theme
     vimix-cursors
     zed-editor
     mcomix
@@ -31,6 +33,10 @@
       shiftwidth = 2;        # set shiftwidth=2
     };
      extraConfig = ''
+       set background=dark
+       colorscheme slate
+       set cursorline
+       set cursorcolumn
        set autoindent
        set smartindent
        set hlsearch
