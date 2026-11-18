@@ -8,7 +8,9 @@
   home.packages = with pkgs; [
     zapzap
     nordzy-icon-theme
+    colloid-icon-theme
     nordzy-cursor-theme
+    vimix-icon-theme
     vimix-cursors
     zed-editor
     mcomix
@@ -34,7 +36,6 @@
     };
      extraConfig = ''
        set background=dark
-       colorscheme slate
        set cursorline
        set cursorcolumn
        set autoindent
