@@ -31,8 +31,6 @@
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
    environment.systemPackages = with pkgs; [
-     freac
-     jellyfin-desktop
      podman
      nwg-look
      noctalia
@@ -40,14 +38,11 @@
      ansible-navigator
      ansible-lint
      terraform
-#     tsukimi
-     jellyfin-desktop
      unrar
      mediawriter
      vim
      kdePackages.okular
      libreoffice
-     #onlyoffice-desktopeditors
      qbittorrent
      vlc
      proton-vpn
@@ -61,7 +56,6 @@
      adwaita-icon-theme
      hicolor-icon-theme
      gruvbox-plus-icons
-    # inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
    ] ;
    fonts.packages = with pkgs; [
      nerd-fonts.caskaydia-cove
