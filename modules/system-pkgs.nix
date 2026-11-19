@@ -13,6 +13,27 @@
   programs.kdeconnect = {
     enable = true;
 };
+ 
+ # Enable podman virtualization
+  virtualisation.podman = {
+    enable = true;
+    dockerCompat = true;
+    defaultNetwork.settings.dns_enabled = true;
+  };
+  users.users.junkiejamba = {
+    extraGroups = [
+      "podman"
+    ];
+  };
+  virtualisation.containers.registries.settings = {
+     # Equivalent to the old registries.search
+     unqualified-search-registries = [
+       "docker.io"
+       "quay.io"
+     ]; 
+  };
+
+
   #Install Zsh
   programs.zsh.enable = true;
   #Install Steam
@@ -25,8 +46,8 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # Enable podman virtualization
-  virtualisation.podman.enable = true;
+
+  
 
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
