@@ -52,6 +52,7 @@
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
    environment.systemPackages = with pkgs; [
+     cisco-packet-tracer_9
      podman
      nwg-look
      noctalia
