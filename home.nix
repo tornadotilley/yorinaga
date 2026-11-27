@@ -27,7 +27,7 @@
   programs.vim = {
     enable = true;
 
-    # Declarative Vim settings mapping to your dotfile
+    # Declarative Vim settings mapping to dotfile
     settings = {
       number = true;         # set number
       expandtab = true;      # set expandtab
@@ -72,15 +72,15 @@
     };
     # Shell aliases
     shellAliases = {
-    #  # eza replacements
-    #  ls = "eza --icons=auto";
-    #  l = "eza -1 --icons=auto";
-    #  ll = "eza -l --icons=auto --git";
-    #  la = "eza -a --icons=auto";
-    #  lla = "eza -la --icons=auto --git";
-    #  lt = "eza --tree --level=2 --icons=auto";
-    #  lS = "eza -l --sort=size --icons=auto";
-    #  lt-mod = "eza -l --sort=modified --icons=auto";
+      # eza replacements
+      ls = "eza --icons=auto";
+      l = "eza -1 --icons=auto";
+      ll = "eza -l --icons=auto --git";
+      la = "eza -a --icons=auto";
+      lla = "eza -la --icons=auto --git";
+      lt = "eza --tree --level=2 --icons=auto";
+      lS = "eza -l --sort=size --icons=auto";
+      lt-mod = "eza -l --sort=modified --icons=auto";
 
       # Virtualization
       virsh = "virsh -c qemu:///system";
